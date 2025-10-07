@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7q77h3vo80a"]
+[gd_scene load_steps=3 format=3 uid="uid://c7q77h3vo80a"]
 
-[ext_resource type="Texture2D" uid="uid://bui7vxbgstcbj" path="res://Knight1.png" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://d0qi1fwccd5sm" path="res://CardManager.gd" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://blenoccdqo4r6" path="res://Card.tscn" id="2_r0du0"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(561, 285)
-texture = ExtResource("1_glv2v")
+[node name="CardManager" type="Node2D" parent="."]
+script = ExtResource("1_uu6xs")
+
+[node name="Card" parent="CardManager" instance=ExtResource("2_r0du0")]
+position = Vector2(94, 79)
+
+[node name="Card2" parent="CardManager" instance=ExtResource("2_r0du0")]
+position = Vector2(214, 86)
