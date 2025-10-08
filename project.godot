@@ -14,3 +14,7 @@ config/name="Card-Game"
 run/main_scene="uid://c7q77h3vo80a"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/vsync/vsync_mode=0
