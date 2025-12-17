@@ -4,6 +4,7 @@ const COLLISION_MASK_CARD = 1
 
 var screen_size
 var card_being_dragged
+var is_hovering_on_card
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
@@ -33,10 +34,18 @@ func connect_card_signals(card):
 
 	
 func on_hovered_over_card(card):
-	highlight_card(card, true)
+	if !is_hovering_on_card:
+		is_hovering_on_card = true
+		highlight_card(card, true)
 	
 func on_hovered_off_card(card):
 	highlight_card(card, false)
+	var new_card_hovered = raycast_check_for_card()
+	if new_card_hovered:
+		highlight_card(new_card_hovered, true)
+	else:
+		is_hovering_on_card = false
+		
 	
 func highlight_card(card, hovered):
 	if hovered:
