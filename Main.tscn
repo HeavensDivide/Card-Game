@@ -16,4 +16,5 @@ position = Vector2(94, 79)
 position = Vector2(214, 86)
 
 [node name="CardSlot" parent="." unique_id=1167321183 instance=ExtResource("3_r0du0")]
+position = Vector2(65, 188)
 scale = Vector2(0.3, 0.3)
