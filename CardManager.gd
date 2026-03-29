@@ -35,7 +35,11 @@ func start_drag(card):
 
 func finish_drag():
 	card_being_dragged.scale = Vector2(1.05, 1.05)
-	var cards_slot_found = raycast_check_for_card()
+	var card_slot_found = raycast_check_for_card()
+	if card_slot_found:
+		# Card dropped in the card slot
+		card_being_dragged.position = card_slot_found.position
+		card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
 	card_being_dragged = null
 
 func connect_card_signals(card):
