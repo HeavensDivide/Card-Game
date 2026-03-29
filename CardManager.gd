@@ -75,3 +75,18 @@ func raycast_check_for_card():
 	if result.size() > 0:
 		return result[0].collider.get_parent()
 	return null
+
+
+func get_card_with_highest_z_index(cards):
+	# Assume the first card in cards array has the highest z index
+	var highest_z_card = cards[0].collider.get_parent()
+	var highest_z_index = highest_z_card.z_index
+
+	# Loop through the rest of the cards checking for a higher z index
+	for i in range(1, cards.size()):
+		var current_card = cards[i].collider.get_parent()
+		if current_card.z_index > highest_z_index:
+			highest_z_card = current_card
+			highest_z_index = current_card.z_index
+
+	return highest_z_card
