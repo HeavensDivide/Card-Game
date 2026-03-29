@@ -22,10 +22,20 @@ func _input(event):
 		if event.pressed:
 			var card = raycast_check_for_card()
 			if card:
-				card_being_dragged = card
+				start_drag(card)
 		else:
-			card_being_dragged = null
+			if card_being_dragged:
+				finish_drag()
 
+
+func start_drag(card):
+	card_being_dragged = card
+	card.scale = Vector2(1, 1)
+
+func finish_drag():
+	card_being_dragged.scale = Vector2(1.05, 1.05)
+	var cards_slot_found = raycast_check_for_card()
+	card_being_dragged = null
 
 func connect_card_signals(card):
 	card.connect("hovered", on_hovered_over_card)
