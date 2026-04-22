@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c7q77h3vo80a"]
 
 [ext_resource type="Script" uid="uid://d0qi1fwccd5sm" path="res://CardManager.gd" id="1_uu6xs"]
-[ext_resource type="PackedScene" uid="uid://blenoccdqo4r6" path="res://Card.tscn" id="2_r0du0"]
-[ext_resource type="PackedScene" uid="uid://bev82ovoox52d" path="res://CardSlot.tscn" id="3_r0du0"]
+[ext_resource type="PackedScene" uid="uid://blenoccdqo4r6" path="res://Scenes/Card.tscn" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bev82ovoox52d" path="res://Scenes/CardSlot.tscn" id="3_r0du0"]
+[ext_resource type="Script" uid="uid://bhiepscwq5bki" path="res://PlayerHand.gd" id="4_cm0pq"]
 
 [node name="Main" type="Node2D" unique_id=386895514]
 
@@ -18,3 +19,6 @@ position = Vector2(214, 86)
 [node name="CardSlot" parent="." unique_id=1167321183 instance=ExtResource("3_r0du0")]
 position = Vector2(65, 188)
 scale = Vector2(0.3, 0.3)
+
+[node name="PlayerHand" type="Node2D" parent="." unique_id=2055944197]
+script = ExtResource("4_cm0pq")
