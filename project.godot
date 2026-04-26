@@ -17,8 +17,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Card-Game"
 run/main_scene="uid://c7q77h3vo80a"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/vsync/vsync_mode=0

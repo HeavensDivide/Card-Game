@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cht4hd52d1mlu"
-path="res://.godot/imported/Sorcerer1.png-19b2a337cfc9ca1107ddcffa28f01a07.ctex"
+uid="uid://bptynj7fpo0dv"
+path="res://.godot/imported/Knight1.png-742b58e4efb2f27b5efdac2724ce8d99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sorcerer1.png"
-dest_files=["res://.godot/imported/Sorcerer1.png-19b2a337cfc9ca1107ddcffa28f01a07.ctex"]
+source_file="res://Assets/Knight1.png"
+dest_files=["res://.godot/imported/Knight1.png-742b58e4efb2f27b5efdac2724ce8d99.ctex"]
 
 [params]
 
