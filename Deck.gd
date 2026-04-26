@@ -3,7 +3,7 @@ extends Node2D
 const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const CARD_DRAW_SPEED = 0.5 #const ktory kontroluje speed wyjmowania kart z decku(czym wiekszy tym wolniej)
 
-var player_deck = ["Knight", "Knight", "Knight"]
+var player_deck = ["Knight", "Knight", "Knight", "Knight", "Knight", "Knight"]
 
 func _ready() -> void:
 	$RichTextLabel.text = str(player_deck.size())
